@@ -881,7 +881,7 @@ namespace Xamarin.Auth._MobileServices
 
             if (data.ContainsKey("error"))
             {
-                throw new AuthException("Error authenticating: " + data["error"]);
+                throw new AuthException("Error authenticating: " + data["error"], data["error_description"]);
             }
             #region
             //---------------------------------------------------------------------------------------

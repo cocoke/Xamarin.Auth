@@ -44,6 +44,10 @@ namespace Xamarin.Auth._MobileServices
         public AuthException(string message) : base(message)
         {
         }
+        public AuthException(string message, string errorDescription) : base(message)
+        {
+            this.ErrorDescription = errorDescription;
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AuthException"/> class.
@@ -53,6 +57,8 @@ namespace Xamarin.Auth._MobileServices
         public AuthException(string message, Exception inner) : base(message, inner)
         {
         }
+
+        public string ErrorDescription { get; set; }
     }
 }
 
